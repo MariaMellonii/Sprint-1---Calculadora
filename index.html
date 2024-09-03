@@ -1,52 +1,69 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-  
-<head> 
-    <title>Calculator</title> 
-      </head> 
-<body> 
-  
-    <table id="Calculator"> 
-        <tr> 
-            <td colspan="4"> 
-                <input type="text" id="result"> 
-            </td> 
-        </tr> 
-        <tr> 
-            <td><input type="button" value="CE"></td> 
-            <td><input type="button" value="C"></td> 
-            <td><input type="button" value="%"></td> 
-            <td><input type="button" value="÷"></td> 
-        </tr> 
-        <tr> 
-            <td><input type="button" value="7"></td> 
-            <td><input type="button" value="8"></td> 
-            <td><input type="button" value="9"></td> 
-            <td><input type="button" value="*"></td> 
-        </tr> 
-        <tr> 
-            <td><input type="button" value="4"></td> 
-            <td><input type="button" value="5"></td> 
-            <td><input type="button" value="6"></td> 
-            <td><input type="button" value="-"></td> 
-        </tr> 
-        <tr> 
-            <td><input type="button" value="1"></td> 
-            <td><input type="button" value="2"></td> 
-            <td><input type="button" value="3"></td> 
-            <td><input type="button" value="+"></td> 
-        </tr> 
-        <tr> 
-            <td><input type="button" value="+/-"></td> 
-            <td><input type="button" value="0"></td> 
-            <td><input type="button" value=","></td> 
-            <td><input type="button" value="="></td> 
-        </tr> 
-    </table> 
-</body> 
-  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="./icons/icon-48x48.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <title>CalculatorByMelloni</title>
+</head>
+<body>
+    <main id="app">
+        <section id="calculator">
+            <section id="calculation">
+                <section id="calc-numbers"></section>
+
+                <section id="contain-result">
+                    <span id="result-symbol"> = </span>
+                    <span id="result"></span>
+                </section>
+            </section>
+            <section id="keyboard">
+                <button id="clear-entry">CE</button>
+                <button id="clear">C</button>
+                <button id="percent">
+                    <i class="ph-percent"></i>
+                </button>
+                <button class="col-right operator" id="divide">
+                    <i class="ph-divide"></i>
+                </button>
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="col-right operator" id="multiple">
+                    <i class="ph-x"></i>
+                </button>
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="col-right operator" id="minus">
+                    <i class="ph-minus"></i>
+                </button>
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="col-right operator" id="sum">
+                    <i class="ph-plus"></i>
+                </button>
+                <button>
+                    <i class="ph-plus-minus"></i>
+                </button>
+                <button class="number" value="0">0</button>
+                <button id="comma">,</button>
+                <button class="col-right" id="equals">
+                    <i class="ph-equals"></i>
+                </button>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
