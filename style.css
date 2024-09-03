@@ -1,0 +1,143 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --calculator-background-color: #2D2A37;
+    --text-color: #EBEBEB;
+    --operator-background-color: #462878;
+    --operator-result: #7F45E2;
+    --text-calculation: #6B6B6B;
+    --result-background-color: #211f28;
+    --focus-color: #09080ef5;
+    font-size: 62.5%;
+}
+
+#app {
+    display: grid;
+    place-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+}
+
+#calculator {
+    width: 356px;
+
+    background-color: var(--calculator-background-color);
+    border-radius: 4.8rem;
+    padding: 5.4rem 3.2rem 3.2rem;
+
+    display: grid;
+    gap: 2.6rem;
+
+    box-shadow: 0px 188px 52px rgba(0, 0, 0, 0.01), 
+    0px 120px 48px rgba(0, 0, 0, 0.04), 
+    0px 68px 41px rgba(0, 0, 0, 0.15), 
+    0px 30px 30px rgba(0, 0, 0, 0.26), 
+    0px 8px 17px rgba(0, 0, 0, 0.29), 
+    inset 0px 6px 8px rgba(255, 255, 255, 0.1), 
+    inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+
+#calculation {
+    width: 288px;
+    background-color: var(--result-background-color);
+
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    box-shadow: inset 1px 0px 9px 1px #09080e40;
+}
+
+
+#calc-numbers {
+    text-align: right;
+    font-size: 2rem;
+    color: var(--text-calculation);
+}
+
+#contain-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contain-result span {
+    font-size: 3.6rem;
+    color: var(--text-color);
+}
+
+span#result-symbol {
+    font-size: 3rem;
+    color: var(--text-calculation);
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.2rem;
+}
+
+button, button i {
+    color: var(--text-color);
+    font-size: 2.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+
+
+button:active {
+    transform: translateY(3px) rotateX(-10deg);
+}
+
+#keyboard button:first-child {
+    color: #975DFA;
+}
+
+#keyboard button {
+    width: 64px;
+    height: 64px;
+
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.05)), #2D2A37;
+
+    box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 
+    0px 7px 7px rgba(0, 0, 0, 0.04), 
+    0px 4px 6px rgba(0, 0, 0, 0.1), 
+    0px 2px 4px rgba(0, 0, 0, 0.26), 
+    0px 0px 2px rgba(0, 0, 0, 0.29), 
+    inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+}
+ #keyboard button:hover {
+    
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.05)), #2D2A37;
+}
+
+
+#keyboard .col-right {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+    box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 
+    0px 7px 7px rgba(0, 0, 0, 0.04), 
+    0px 4px 6px rgba(0, 0, 0, 0.1), 
+    0px 2px 4px rgba(0, 0, 0, 0.26), 
+    0px 0px 2px rgba(0, 0, 0, 0.29), 
+    inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+#keyboard #equals {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7F45E2;
+}
